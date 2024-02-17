@@ -1,13 +1,18 @@
-const initialState = {
-    count: 0
+export const reducer = (state = 0, action) => {
+    switch (action.type){
+        case 'INCREMENT':
+            return state +1
+        case 'DECREMENT':
+            return state -1
+        case 'VREDINA':
+            return state = 0
+        case 'OCEAN':
+            return state +10
+        case 'OBNULENIA':
+            return state = 0
+    }
+        return state
 }
 
-const counterReducer = (state = initialState, action) => {
-    if (action.type === "INCREMENT"){
-        return state +1
-    }
-    if (action.type === "DECREMENT"){
-       return -1
-    }
-    return state
-}
+
+
